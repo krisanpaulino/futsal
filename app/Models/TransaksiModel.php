@@ -64,6 +64,7 @@ class TransaksiModel extends Model
         $this->join('feedback', 'feedback.transaksi_id = transaksi.transaksi_id', 'left');
         $this->where('transaksi.pelanggan_id', $pelanggan_id);
         $this->groupBy('transaksi.transaksi_id');
+        $this->orderBy('transaksi.tanggal', 'desc');
         return $this->find();
     }
     function getSingle($transaksi_id)
