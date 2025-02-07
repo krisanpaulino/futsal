@@ -1,0 +1,177 @@
+DEBUG - 2025-02-03 02:49:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 02:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 03:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 03:13:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-03 03:27:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORD...' at line 6 in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `transak...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transak...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transak...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `transak...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\TransaksiModel.php(91): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Laporan.php(19): App\Models\TransaksiModel->getLaporan(NULL, NULL)
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Laporan->keuangan()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-03 03:27:06 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORD...' at line 6
+[Method: GET, Route: admin/laporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `transaksi`.*, `pelanggan`.`pelanggan_nama`, count(jadwal.jadwal_id) as jumlah
+FROM `transaksi`
+JOIN `pelanggan` ON `pelanggan`.`pelanggan_id` = `transaksi`.`pelanggan_id`
+JOIN `jadwal` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `tanggal_pesan` > IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORDER BY `tanggal_pesan` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\TransaksiModel.php(91): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Laporan.php(19): App\Models\TransaksiModel->getLaporan(null, null)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 03:27:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORD...' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaksi`.*, `pelanggan`.`pelanggan_nama`, count(jadwal.jadwal_id) as jumlah
+FROM `transaksi`
+JOIN `pelanggan` ON `pelanggan`.`pelanggan_id` = `transaksi`.`pelanggan_id`
+JOIN `jadwal` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `tanggal_pesan` > IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORDER BY `tanggal_pesan` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaksi`.*, `pelanggan`.`pelanggan_nama`, count(jadwal.jadwal_id) as jumlah
+FROM `transaksi`
+JOIN `pelanggan` ON `pelanggan`.`pelanggan_id` = `transaksi`.`pelanggan_id`
+JOIN `jadwal` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `tanggal_pesan` > IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORDER BY `tanggal_pesan` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `transaksi`.*, `pelanggan`.`pelanggan_nama`, count(jadwal.jadwal_id) as jumlah
+FROM `transaksi`
+JOIN `pelanggan` ON `pelanggan`.`pelanggan_id` = `transaksi`.`pelanggan_id`
+JOIN `jadwal` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `tanggal_pesan` > IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORDER BY `tanggal_pesan` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\TransaksiModel.php(91): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Laporan.php(19): App\Models\TransaksiModel->getLaporan(null, null)
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->keuangan()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 03:27:06 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORD...' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `transaksi`.*, `pelanggan`.`pelanggan_nama`, count(jadwal.jadwal_id) as jumlah
+FROM `transaksi`
+JOIN `pelanggan` ON `pelanggan`.`pelanggan_id` = `transaksi`.`pelanggan_id`
+JOIN `jadwal` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `tanggal_pesan` > IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORDER BY `tanggal_pesan` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `transaksi`.*, `pelanggan`.`pelanggan_nama`, count(jadwal.jadwal_id) as jumlah
+FROM `transaksi`
+JOIN `pelanggan` ON `pelanggan`.`pelanggan_id` = `transaksi`.`pelanggan_id`
+JOIN `jadwal` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `tanggal_pesan` > IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORDER BY `tanggal_pesan` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `transaksi`.*, `pelanggan`.`pelanggan_nama`, count(jadwal.jadwal_id) as jumlah
+FROM `transaksi`
+JOIN `pelanggan` ON `pelanggan`.`pelanggan_id` = `transaksi`.`pelanggan_id`
+JOIN `jadwal` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `tanggal_pesan` > IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORDER BY `tanggal_pesan` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `transaksi`.*, `pelanggan`.`pelanggan_nama`, count(jadwal.jadwal_id) as jumlah
+FROM `transaksi`
+JOIN `pelanggan` ON `pelanggan`.`pelanggan_id` = `transaksi`.`pelanggan_id`
+JOIN `jadwal` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `tanggal_pesan` > IS NULL
+AND `tanggal_pesan` < IS NULL
+GROUP BY `transaksi`.`transaksi_id`
+ORDER BY `tanggal_pesan` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\TransaksiModel.php(91): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Laporan.php(19): App\Models\TransaksiModel->getLaporan(null, null)
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->keuangan()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-03 03:27:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 03:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 03:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 03:30:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 03:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 03:35:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 03:36:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 03:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-03 03:46:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "admin/sekolah_laporan.php"
+[Method: GET, Route: admin/laporan/cetak]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/sekolah_laporan.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/sekolah_laporan', [], true)
+ 3 APPPATH\Controllers\Laporan.php(48): view('admin/sekolah_laporan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->cetak()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-03 03:47:09 --> ErrorException: Undefined variable $tanggal
+[Method: GET, Route: admin/laporan/cetak]
+in APPPATH\Views\admin\laporan_cetak.php on line 135.
+ 1 APPPATH\Views\admin\laporan_cetak.php(135): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tanggal', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\laporan_cetak.php', 135)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\laporan_cetak.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/laporan_cetak', [], true)
+ 5 APPPATH\Controllers\Laporan.php(48): view('admin/laporan_cetak', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->cetak()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-03 04:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

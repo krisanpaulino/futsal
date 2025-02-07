@@ -1,0 +1,1343 @@
+DEBUG - 2025-02-04 00:54:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-04 01:46:42 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'futsal' in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:202
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(202): mysqli->real_connect('localhost', 'root', '', 'futsal', 3306, '', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `transak...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\TransaksiModel.php(93): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Laporan.php(21): App\Models\TransaksiModel->getLaporan('2025-01-15', '')
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Laporan->keuangan()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'futsal' in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `transak...', Array, false)
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#5 C:\xampp_8\htdocs\futsal\app\Models\TransaksiModel.php(93): CodeIgniter\BaseModel->find()
+#6 C:\xampp_8\htdocs\futsal\app\Controllers\Laporan.php(21): App\Models\TransaksiModel->getLaporan('2025-01-15', '')
+#7 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Laporan->keuangan()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-02-04 01:46:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'futsal'
+[Method: GET, Route: admin/laporan]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `transaksi`.*, `pelanggan`.`pelanggan_nama`, count(jadwal.jadwal_id) as jumlah
+FROM `transaksi`
+JOIN `pelanggan` ON `pelanggan`.`pelanggan_id` = `transaksi`.`pelanggan_id`
+JOIN `jadwal` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `tanggal_pesan` >= :tanggal_pesan:
+GROUP BY `transaksi`.`transaksi_id`
+ORDER BY `tanggal_pesan` DESC', [...], false)
+ 3 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 5 APPPATH\Models\TransaksiModel.php(93): CodeIgniter\BaseModel->find()
+ 6 APPPATH\Controllers\Laporan.php(21): App\Models\TransaksiModel->getLaporan('2025-01-15', '')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->keuangan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 01:46:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 01:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:03:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:04:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:09:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:11:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:11:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:11:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:11:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:12:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:13:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:27:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:34:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:36:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 02:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 03:01:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 03:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 03:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 03:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 03:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 03:10:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 03:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 03:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 04:56:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 04:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 04:58:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 04:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 04:59:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 04:59:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 04:59:16 --> ErrorException: Undefined array key "dari"
+[Method: GET, Route: admin/laporan]
+in APPPATH\Views\admin\laporan_index.php on line 45.
+ 1 APPPATH\Views\admin\laporan_index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dari"', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\laporan_index.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\laporan_index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/laporan_index', [], true)
+ 5 APPPATH\Controllers\Laporan.php(25): view('admin/laporan_index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 04:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:05:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 05:05:06 --> ErrorException: Undefined array key "dari"
+[Method: GET, Route: admin/laporan]
+in APPPATH\Views\admin\laporan_index.php on line 45.
+ 1 APPPATH\Views\admin\laporan_index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dari"', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\laporan_index.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\laporan_index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/laporan_index', [], true)
+ 5 APPPATH\Controllers\Laporan.php(25): view('admin/laporan_index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 05:05:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 05:05:22 --> ErrorException: Undefined array key "dari"
+[Method: GET, Route: admin/laporan]
+in APPPATH\Views\admin\laporan_index.php on line 45.
+ 1 APPPATH\Views\admin\laporan_index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dari"', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\laporan_index.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\laporan_index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/laporan_index', [], true)
+ 5 APPPATH\Controllers\Laporan.php(25): view('admin/laporan_index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 05:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:14:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:14:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:14:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:16:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:16:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:27:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:29:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:34:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:58:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 05:58:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-04 05:58:40 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = '2025-02-04'
+ORDER BY `jadwal`.`waktu_mulai` ASC' at line 7 in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\JadwalModel.php(97): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Jadwal.php(34): App\Models\JadwalModel->getToday()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Jadwal->today()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jadwal))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-04 05:58:40 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = '2025-02-04'
+ORDER BY `jadwal`.`waktu_mulai` ASC' at line 7
+[Method: GET, Route: admin/jadwal/hari-ini]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`status` != :jadwal.status:
+AND `jadwal`.`tanggal` `=` = :jadwal.tanggal =:
+ORDER BY `jadwal`.`waktu_mulai` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\JadwalModel.php(97): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Jadwal.php(34): App\Models\JadwalModel->getToday()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jadwal->today()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jadwal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 05:58:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = '2025-02-04'
+ORDER BY `jadwal`.`waktu_mulai` ASC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` != \'Selesai\'
+AND `jadwal`.`tanggal` `=` = \'2025-02-04\'
+ORDER BY `jadwal`.`waktu_mulai` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` != \'Selesai\'
+AND `jadwal`.`tanggal` `=` = \'2025-02-04\'
+ORDER BY `jadwal`.`waktu_mulai` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`status` != :jadwal.status:
+AND `jadwal`.`tanggal` `=` = :jadwal.tanggal =:
+ORDER BY `jadwal`.`waktu_mulai` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\JadwalModel.php(97): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Jadwal.php(34): App\Models\JadwalModel->getToday()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jadwal->today()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jadwal))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 05:58:40 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = '2025-02-04'
+ORDER BY `jadwal`.`waktu_mulai` ASC' at line 7
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` != \'Selesai\'
+AND `jadwal`.`tanggal` `=` = \'2025-02-04\'
+ORDER BY `jadwal`.`waktu_mulai` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` != \'Selesai\'
+AND `jadwal`.`tanggal` `=` = \'2025-02-04\'
+ORDER BY `jadwal`.`waktu_mulai` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` != \'Selesai\'
+AND `jadwal`.`tanggal` `=` = \'2025-02-04\'
+ORDER BY `jadwal`.`waktu_mulai` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`status` != :jadwal.status:
+AND `jadwal`.`tanggal` `=` = :jadwal.tanggal =:
+ORDER BY `jadwal`.`waktu_mulai` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\JadwalModel.php(97): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Jadwal.php(34): App\Models\JadwalModel->getToday()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jadwal->today()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jadwal))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 06:00:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 06:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 06:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-04 06:00:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = 'Selesai'
+AND `jadwal`.`tanggal` `=` = '2025-02-04'
+ORDER BY `jadwal`.`...' at line 6 in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\JadwalModel.php(108): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Jadwal.php(43): App\Models\JadwalModel->getSelesai()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Jadwal->done()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jadwal))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-04 06:00:36 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = 'Selesai'
+AND `jadwal`.`tanggal` `=` = '2025-02-04'
+ORDER BY `jadwal`.`...' at line 6
+[Method: GET, Route: admin/jadwal/selesai]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`status` `=` = :jadwal.status =:
+AND `jadwal`.`tanggal` `=` = :jadwal.tanggal =:
+ORDER BY `jadwal`.`waktu_mulai` ASC', [...], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\JadwalModel.php(108): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Jadwal.php(43): App\Models\JadwalModel->getSelesai()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jadwal->done()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jadwal))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:00:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = 'Selesai'
+AND `jadwal`.`tanggal` `=` = '2025-02-04'
+ORDER BY `jadwal`.`...' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` `=` = \'Selesai\'
+AND `jadwal`.`tanggal` `=` = \'2025-02-04\'
+ORDER BY `jadwal`.`waktu_mulai` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` `=` = \'Selesai\'
+AND `jadwal`.`tanggal` `=` = \'2025-02-04\'
+ORDER BY `jadwal`.`waktu_mulai` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`status` `=` = :jadwal.status =:
+AND `jadwal`.`tanggal` `=` = :jadwal.tanggal =:
+ORDER BY `jadwal`.`waktu_mulai` ASC', [...], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\JadwalModel.php(108): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Jadwal.php(43): App\Models\JadwalModel->getSelesai()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jadwal->done()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jadwal))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 06:00:36 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = 'Selesai'
+AND `jadwal`.`tanggal` `=` = '2025-02-04'
+ORDER BY `jadwal`.`...' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` `=` = \'Selesai\'
+AND `jadwal`.`tanggal` `=` = \'2025-02-04\'
+ORDER BY `jadwal`.`waktu_mulai` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` `=` = \'Selesai\'
+AND `jadwal`.`tanggal` `=` = \'2025-02-04\'
+ORDER BY `jadwal`.`waktu_mulai` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` `=` = \'Selesai\'
+AND `jadwal`.`tanggal` `=` = \'2025-02-04\'
+ORDER BY `jadwal`.`waktu_mulai` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`status` `=` = :jadwal.status =:
+AND `jadwal`.`tanggal` `=` = :jadwal.tanggal =:
+ORDER BY `jadwal`.`waktu_mulai` ASC', [...], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\JadwalModel.php(108): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Jadwal.php(43): App\Models\JadwalModel->getSelesai()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Jadwal->done()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Jadwal))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 06:00:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 06:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 06:02:37 --> ErrorException: Undefined array key "dari"
+[Method: GET, Route: admin/laporan]
+in APPPATH\Views\admin\laporan_index.php on line 45.
+ 1 APPPATH\Views\admin\laporan_index.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "dari"', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\laporan_index.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\laporan_index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/laporan_index', [], true)
+ 5 APPPATH\Controllers\Laporan.php(25): view('admin/laporan_index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->keuangan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 06:03:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 07:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 07:10:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 07:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 07:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-04 08:12:33 --> mysqli_sql_exception: Unknown column 'transaksi.transaksi_id' in 'field list' in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pelangg...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelangg...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelangg...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelangg...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\PelangganModel.php(61): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-04 08:12:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaksi.transaksi_id' in 'field list'
+[Method: GET, Route: admin/pelanggan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`', [], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\PelangganModel.php(61): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 08:12:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaksi.transaksi_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`', [], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\PelangganModel.php(61): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 08:12:33 --> [Caused by] mysqli_sql_exception: Unknown column 'transaksi.transaksi_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`', [], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PelangganModel.php(61): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-04 08:34:31 --> mysqli_sql_exception: Table 'futsal.transaksi_id' doesn't exist in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pelangg...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelangg...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelangg...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelangg...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\PelangganModel.php(62): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-04 08:34:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'futsal.transaksi_id' doesn't exist
+[Method: GET, Route: admin/pelanggan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`', [], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\PelangganModel.php(62): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 08:34:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'futsal.transaksi_id' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`', [], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\PelangganModel.php(62): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 08:34:31 --> [Caused by] mysqli_sql_exception: Table 'futsal.transaksi_id' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`', [], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PelangganModel.php(62): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-04 08:35:05 --> mysqli_sql_exception: Table 'futsal.transaksi_id' doesn't exist in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pelangg...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelangg...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelangg...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelangg...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\PelangganModel.php(63): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-04 08:35:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'futsal.transaksi_id' doesn't exist
+[Method: GET, Route: admin/pelanggan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`
+GROUP BY `pelanggan`.`pelanggan_id`', [], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\PelangganModel.php(63): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 08:35:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'futsal.transaksi_id' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`
+GROUP BY `pelanggan`.`pelanggan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`
+GROUP BY `pelanggan`.`pelanggan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`
+GROUP BY `pelanggan`.`pelanggan_id`', [], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\PelangganModel.php(63): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 08:35:05 --> [Caused by] mysqli_sql_exception: Table 'futsal.transaksi_id' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`
+GROUP BY `pelanggan`.`pelanggan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`
+GROUP BY `pelanggan`.`pelanggan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`
+GROUP BY `pelanggan`.`pelanggan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi_id` ON `transaksi_id`.`transaksi_id_id` = `pelanggan`.`transaksi_id_id`
+GROUP BY `pelanggan`.`pelanggan_id`', [], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PelangganModel.php(63): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-04 08:35:28 --> mysqli_sql_exception: Unknown column 'transaksi_id.pelanggan_id' in 'on clause' in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pelangg...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelangg...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelangg...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelangg...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\PelangganModel.php(63): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-04 08:35:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaksi_id.pelanggan_id' in 'on clause'
+[Method: GET, Route: admin/pelanggan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi` ON `transaksi_id`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+GROUP BY `pelanggan`.`pelanggan_id`', [], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\PelangganModel.php(63): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 08:35:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaksi_id.pelanggan_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi` ON `transaksi_id`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+GROUP BY `pelanggan`.`pelanggan_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi` ON `transaksi_id`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+GROUP BY `pelanggan`.`pelanggan_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi` ON `transaksi_id`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+GROUP BY `pelanggan`.`pelanggan_id`', [], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\PelangganModel.php(63): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 08:35:28 --> [Caused by] mysqli_sql_exception: Unknown column 'transaksi_id.pelanggan_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi` ON `transaksi_id`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+GROUP BY `pelanggan`.`pelanggan_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi` ON `transaksi_id`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+GROUP BY `pelanggan`.`pelanggan_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi` ON `transaksi_id`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+GROUP BY `pelanggan`.`pelanggan_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `pelanggan`.*, count(transaksi.transaksi_id) as jumlah_transaksi
+FROM `pelanggan`
+JOIN `user` ON `user`.`user_id` = `pelanggan`.`user_id`
+JOIN `transaksi` ON `transaksi_id`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+GROUP BY `pelanggan`.`pelanggan_id`', [], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\PelangganModel.php(63): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Admin.php(32): App\Models\PelangganModel->findPelanggan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 08:35:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 08:35:42 --> ErrorException: Undefined variable $pelanggan
+[Method: GET, Route: admin/pelanggan]
+in APPPATH\Views\admin\pelanggan_index.php on line 46.
+ 1 APPPATH\Views\admin\pelanggan_index.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pelanggan', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\pelanggan_index.php', 46)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\pelanggan_index.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/pelanggan_index', [], true)
+ 5 APPPATH\Controllers\Admin.php(37): view('admin/pelanggan_index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->pelanggan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 13:22:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:23:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:25:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:26:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:26:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:36:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:36:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 13:36:33 --> ErrorException: Attempt to read property "pelanggan_nama" on array
+[Method: GET, Route: admin/transaksi-pelanggan/1]
+in APPPATH\Views\admin\transaksi_pelanggan.php on line 34.
+ 1 APPPATH\Views\admin\transaksi_pelanggan.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "pelanggan_nama" on array', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\transaksi_pelanggan.php', 34)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\transaksi_pelanggan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/transaksi_pelanggan', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(83): view('admin/transaksi_pelanggan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->byPelanggan('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 13:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 13:38:21 --> ErrorException: Undefined property: stdClass::$pelanggan_nama
+[Method: GET, Route: admin/transaksi-pelanggan/1]
+in APPPATH\Views\admin\transaksi_pelanggan.php on line 60.
+ 1 APPPATH\Views\admin\transaksi_pelanggan.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pelanggan_nama', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\transaksi_pelanggan.php', 60)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\transaksi_pelanggan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/transaksi_pelanggan', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(83): view('admin/transaksi_pelanggan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->byPelanggan('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 13:38:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 13:38:45 --> ErrorException: Undefined property: stdClass::$pelanggan_nama
+[Method: GET, Route: admin/transaksi-pelanggan/1]
+in APPPATH\Views\admin\transaksi_pelanggan.php on line 60.
+ 1 APPPATH\Views\admin\transaksi_pelanggan.php(60): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$pelanggan_nama', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\transaksi_pelanggan.php', 60)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\transaksi_pelanggan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/transaksi_pelanggan', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(83): view('admin/transaksi_pelanggan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->byPelanggan('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 13:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 13:39:23 --> ErrorException: Undefined property: stdClass::$jumlah
+[Method: GET, Route: admin/transaksi-pelanggan/1]
+in APPPATH\Views\admin\transaksi_pelanggan.php on line 61.
+ 1 APPPATH\Views\admin\transaksi_pelanggan.php(61): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\transaksi_pelanggan.php', 61)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\admin\\transaksi_pelanggan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('admin/transaksi_pelanggan', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(83): view('admin/transaksi_pelanggan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->byPelanggan('1')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 13:39:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:41:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:52:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 13:52:57 --> ErrorException: Attempt to read property "user_id" on null
+[Method: GET, Route: admin/ganti-password]
+in APPPATH\Helpers\app_helper.php on line 15.
+ 1 APPPATH\Helpers\app_helper.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "user_id" on null', 'C:\\xampp_8\\htdocs\\futsal\\app\\Helpers\\app_helper.php', 15)
+ 2 APPPATH\Controllers\Admin.php(52): user()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin->gantiPassword()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 13:56:45 --> CodeIgniter\Filters\Exceptions\FilterException: "admin" filter must have a matching alias defined.
+[Method: GET, Route: admin/ganti-password]
+in SYSTEMPATH\Filters\Filters.php on line 590.
+ 1 SYSTEMPATH\Filters\Filters.php(590): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('admin')
+ 2 SYSTEMPATH\Filters\Filters.php(641): CodeIgniter\Filters\Filters->enableFilter('admin', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(467): CodeIgniter\Filters\Filters->enableFilters([...], 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 13:57:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:57:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:58:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 13:59:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:01:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:02:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:10:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:43:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:44:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:45:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:46:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:48:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:48:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:48:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:51:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:51:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:52:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:52:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:52:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:52:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:53:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 14:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:02:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:02:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:11:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:11:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:12:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:13:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:15:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:15:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:17:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:17:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:17:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:18:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:18:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:19:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:19:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 15:19:20 --> ErrorException: Undefined array key "durasi"
+[Method: POST, Route: booking]
+in APPPATH\Controllers\Home.php on line 40.
+ 1 APPPATH\Controllers\Home.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "durasi"', 'C:\\xampp_8\\htdocs\\futsal\\app\\Controllers\\Home.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->booking()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 15:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:19:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:19:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:24:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:26:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:28:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:29:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:29:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:29:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:30:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:33:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:33:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:35:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:40:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:40:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:40:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:41:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:42:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:42:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:42:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:43:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:44:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:46:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:46:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:47:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:47:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:47:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:48:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:49:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:50:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:51:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:55:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:57:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:57:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:57:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:58:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 15:58:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:07:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:07:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:07:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:08:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:20:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-04 16:20:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = 'Selesai'
+AND `transaksi`.`pelanggan_id` = '1'
+ORDER BY `jadwal`.`tangg...' at line 6 in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\JadwalModel.php(89): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Home.php(95): App\Models\JadwalModel->tampilRiwayat('1')
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->jadwalSaya()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-04 16:20:57 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = 'Selesai'
+AND `transaksi`.`pelanggan_id` = '1'
+ORDER BY `jadwal`.`tangg...' at line 6
+[Method: GET, Route: jadwal-saya]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`status` `=` = :jadwal.status =:
+AND `transaksi`.`pelanggan_id` = :transaksi.pelanggan_id:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\JadwalModel.php(89): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Home.php(95): App\Models\JadwalModel->tampilRiwayat('1')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->jadwalSaya()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 16:20:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = 'Selesai'
+AND `transaksi`.`pelanggan_id` = '1'
+ORDER BY `jadwal`.`tangg...' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` `=` = \'Selesai\'
+AND `transaksi`.`pelanggan_id` = \'1\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` `=` = \'Selesai\'
+AND `transaksi`.`pelanggan_id` = \'1\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`status` `=` = :jadwal.status =:
+AND `transaksi`.`pelanggan_id` = :transaksi.pelanggan_id:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\JadwalModel.php(89): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Home.php(95): App\Models\JadwalModel->tampilRiwayat('1')
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->jadwalSaya()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-04 16:20:57 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`=` = 'Selesai'
+AND `transaksi`.`pelanggan_id` = '1'
+ORDER BY `jadwal`.`tangg...' at line 6
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` `=` = \'Selesai\'
+AND `transaksi`.`pelanggan_id` = \'1\'
+ORDER BY `jadwal`.`tanggal` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` `=` = \'Selesai\'
+AND `transaksi`.`pelanggan_id` = \'1\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`status` `=` = \'Selesai\'
+AND `transaksi`.`pelanggan_id` = \'1\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `transaksi`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`status` `=` = :jadwal.status =:
+AND `transaksi`.`pelanggan_id` = :transaksi.pelanggan_id:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\JadwalModel.php(89): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Home.php(95): App\Models\JadwalModel->tampilRiwayat('1')
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->jadwalSaya()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 16:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:21:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:22:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:22:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 16:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:03:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:05:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:05:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:09:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:09:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 17:09:27 --> CodeIgniter\Validation\Exceptions\ValidationException: "transaksi_id" is not a valid rule.
+[Method: POST, Route: feedback]
+in SYSTEMPATH\Validation\Validation.php on line 346.
+ 1 SYSTEMPATH\Validation\Validation.php(346): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('transaksi_id')
+ 2 SYSTEMPATH\Validation\Validation.php(202): CodeIgniter\Validation\Validation->processRules('0', '0', null, [...], [...], '0')
+ 3 SYSTEMPATH\BaseModel.php(1576): CodeIgniter\Validation\Validation->run([...], null, null)
+ 4 SYSTEMPATH\BaseModel.php(808): CodeIgniter\BaseModel->validate([...])
+ 5 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 6 APPPATH\Controllers\Home.php(160): CodeIgniter\Model->insert([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->feedback()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 17:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:10:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:10:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:11:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:12:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:12:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:13:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:14:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:14:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:16:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 17:16:50 --> ErrorException: Attempt to read property "rating" on array
+[Method: POST, Route: ajax/get-feedback]
+in APPPATH\Views\modal_feedback.php on line 50.
+ 1 APPPATH\Views\modal_feedback.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "rating" on array', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\modal_feedback.php', 50)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\modal_feedback.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modal_feedback', [], true)
+ 5 APPPATH\Controllers\Ajax.php(70): view('modal_feedback', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ajax->getFeedback()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ajax))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 17:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 17:19:42 --> ErrorException: Attempt to read property "rating" on array
+[Method: POST, Route: ajax/get-feedback]
+in APPPATH\Views\modal_feedback.php on line 50.
+ 1 APPPATH\Views\modal_feedback.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "rating" on array', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\modal_feedback.php', 50)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\modal_feedback.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modal_feedback', [], true)
+ 5 APPPATH\Controllers\Ajax.php(70): view('modal_feedback', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ajax->getFeedback()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ajax))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 17:20:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-04 17:20:16 --> ErrorException: Attempt to read property "rating" on array
+[Method: POST, Route: ajax/get-feedback]
+in APPPATH\Views\modal_feedback.php on line 50.
+ 1 APPPATH\Views\modal_feedback.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "rating" on array', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\modal_feedback.php', 50)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\modal_feedback.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('modal_feedback', [], true)
+ 5 APPPATH\Controllers\Ajax.php(70): view('modal_feedback', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Ajax->getFeedback()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ajax))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-04 17:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:23:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:29:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:31:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:32:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:33:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:36:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:36:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:37:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:37:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:39:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:40:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:40:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:42:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:43:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:43:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:43:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:46:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:47:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:47:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:47:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 17:48:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:03:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:03:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:03:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:04:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:04:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:04:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 23:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

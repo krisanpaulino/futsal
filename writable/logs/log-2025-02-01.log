@@ -1,0 +1,784 @@
+DEBUG - 2025-02-01 06:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 06:24:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 06:33:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 06:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 06:34:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 06:35:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 06:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 06:35:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:01:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:06:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:06:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:47:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:47:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:47:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:48:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:51:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:52:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:52:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:53:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:54:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:56:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:57:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:57:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 07:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:00:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:20:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:21:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:21:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:22:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:23:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:23:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:24:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:25:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 08:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-01 08:27:47 --> ErrorException: Undefined variable $jadwal
+[Method: GET, Route: booking]
+in APPPATH\Views\booking_page.php on line 40.
+ 1 APPPATH\Views\booking_page.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jadwal', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\booking_page.php', 40)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\booking_page.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('booking_page', [], true)
+ 5 APPPATH\Controllers\Home.php(36): view('booking_page', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:43:27 --> ErrorException: Attempt to read property "pelanggan_nama" on null
+[Method: GET, Route: booking]
+in APPPATH\Views\booking_page.php on line 45.
+ 1 APPPATH\Views\booking_page.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "pelanggan_nama" on null', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\booking_page.php', 45)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\booking_page.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('booking_page', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('booking_page', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-01 08:43:36 --> mysqli_sql_exception: Unknown table 'futsal.pelanggal' in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-01 08:43:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'futsal.pelanggal'
+[Method: GET, Route: booking]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggal`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = :transaksi.staus:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:43:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown table 'futsal.pelanggal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggal`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggal`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggal`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = :transaksi.staus:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:43:36 --> [Caused by] mysqli_sql_exception: Unknown table 'futsal.pelanggal'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`.*, `pelanggal`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggal`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggal`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggal`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = :transaksi.staus:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-01 08:44:06 --> mysqli_sql_exception: Unknown column 'transaksi.staus' in 'where clause' in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-01 08:44:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaksi.staus' in 'where clause'
+[Method: GET, Route: booking]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = :transaksi.staus:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:44:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaksi.staus' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = :transaksi.staus:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:44:06 --> [Caused by] mysqli_sql_exception: Unknown column 'transaksi.staus' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = :transaksi.staus:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-01 08:44:18 --> mysqli_sql_exception: Unknown column 'transaksi.staus' in 'where clause' in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-01 08:44:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaksi.staus' in 'where clause'
+[Method: GET, Route: booking]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = :transaksi.staus:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:44:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'transaksi.staus' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = :transaksi.staus:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:44:18 --> [Caused by] mysqli_sql_exception: Unknown column 'transaksi.staus' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`staus` = :transaksi.staus:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-01 08:44:33 --> mysqli_sql_exception: Unknown column 'jadwal.pelanggan_id' in 'on clause' in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-01 08:44:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jadwal.pelanggan_id' in 'on clause'
+[Method: GET, Route: booking]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:44:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jadwal.pelanggan_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:44:33 --> [Caused by] mysqli_sql_exception: Unknown column 'jadwal.pelanggan_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-01 08:44:34 --> mysqli_sql_exception: Unknown column 'jadwal.pelanggan_id' in 'on clause' in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-01 08:44:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jadwal.pelanggan_id' in 'on clause'
+[Method: GET, Route: booking]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:44:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jadwal.pelanggan_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:44:34 --> [Caused by] mysqli_sql_exception: Unknown column 'jadwal.pelanggan_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-02-01 08:44:35 --> mysqli_sql_exception: Unknown column 'jadwal.pelanggan_id' in 'on clause' in C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`...', 0)
+#1 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`...')
+#2 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`...')
+#3 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`...', Array, false)
+#4 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\BaseModel.php(609): CodeIgniter\Model->doFind(false, NULL)
+#6 C:\xampp_8\htdocs\futsal\app\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+#7 C:\xampp_8\htdocs\futsal\app\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+#8 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+#9 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp_8\htdocs\futsal\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp_8\htdocs\futsal\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-02-01 08:44:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jadwal.pelanggan_id' in 'on clause'
+[Method: GET, Route: booking]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 2 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 4 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 5 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:44:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'jadwal.pelanggan_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 4 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 6 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 7 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:44:35 --> [Caused by] mysqli_sql_exception: Unknown column 'jadwal.pelanggan_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = \'Sudah Bayar\'
+AND `jadwal`.`tanggal` >= \'2025-02-01\'
+ORDER BY `jadwal`.`tanggal` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `jadwal`.*, `pelanggan`.*
+FROM `jadwal`
+JOIN `transaksi` ON `jadwal`.`transaksi_id` = `transaksi`.`transaksi_id`
+JOIN `pelanggan` ON `jadwal`.`pelanggan_id` = `pelanggan`.`pelanggan_id`
+WHERE `transaksi`.`status` = :transaksi.status:
+AND `jadwal`.`tanggal` >= :jadwal.tanggal:
+ORDER BY `jadwal`.`tanggal` DESC', [...], false)
+ 5 SYSTEMPATH\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(609): CodeIgniter\Model->doFind(false, null)
+ 7 APPPATH\Models\JadwalModel.php(74): CodeIgniter\BaseModel->find()
+ 8 APPPATH\Controllers\Home.php(36): App\Models\JadwalModel->tampilDepan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-02-01 08:45:16 --> ErrorException: foreach() argument must be of type array|object, null given
+[Method: GET, Route: booking]
+in APPPATH\Views\booking_page.php on line 40.
+ 1 APPPATH\Views\booking_page.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp_8\\htdocs\\futsal\\app\\Views\\booking_page.php', 40)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp_8\\htdocs\\futsal\\app\\Views\\booking_page.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('booking_page', [], true)
+ 5 APPPATH\Controllers\Home.php(38): view('booking_page', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->bookingPage()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-02-01 08:45:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:24:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:24:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:24:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:24:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:25:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:25:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:27:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:27:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:28:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-01 13:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
