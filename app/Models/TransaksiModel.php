@@ -18,7 +18,9 @@ class TransaksiModel extends Model
         'tanggal_bayar',
         'bukti_bayar',
         'status',
-        'total_bayar'
+        'total_bayar',
+        'jenis',
+        'nama_penyewa'
     ];
 
     protected bool $allowEmptyInserts = false;
@@ -36,7 +38,7 @@ class TransaksiModel extends Model
 
     // Validation
     protected $validationRules      = [
-        'pelanggan_id' => 'required',
+        // 'pelanggan_id' => 'required',
         'status' => 'required',
         'total_bayar' => 'required'
     ];
@@ -69,25 +71,34 @@ class TransaksiModel extends Model
     }
     function getSingle($transaksi_id)
     {
-        $this->join('pelanggan', 'pelanggan.pelanggan_id = transaksi.pelanggan_id');
+        $this->join('pelanggan', 'pelanggan.pelanggan_id = transaksi.pelanggan_id', 'left');
         $this->where('transaksi_id', $transaksi_id);
         return $this->first();
     }
-    function getAll()
+    function getAll($jenis = null)
     {
-        $this->select('transaksi.*, pelanggan.pelanggan_nama, count(jadwal.jadwal_id) as jumlah');
+        if ($jenis == 'Booking Lapangan') {
+            $this->select('transaksi.*, pelanggan.pelanggan_nama, count(jadwal.jadwal_id) as jumlah');
+            $this->join('pelanggan', 'pelanggan.pelanggan_id = transaksi.pelanggan_id', 'left');
+            $this->join('jadwal', 'jadwal.transaksi_id = transaksi.transaksi_id', 'left');
+        }
+        if ($jenis == 'Sewa Fasilitas') {
+            $this->select('transaksi.*, count(sewafasilitas.sewafasilitas_id) as jumlah');
+            $this->join('sewafasilitas', 'sewafasilitas.transaksi_id = transaksi.transaksi_id');
+            $this->join('fasilitas', 'fasilitas.fasilitas_id = sewafasilitas.fasilitas_id');
+        }
         $this->orderBy('tanggal_pesan', 'desc');
-        $this->join('pelanggan', 'pelanggan.pelanggan_id = transaksi.pelanggan_id');
-        $this->join('jadwal', 'jadwal.transaksi_id = transaksi.transaksi_id');
         $this->groupBy('transaksi.transaksi_id');
+        if ($jenis != null)
+            $this->where('transaksi.jenis', $jenis);
         return $this->find();
     }
     function getLaporan($dari = null, $sampai = null)
     {
         $this->select('transaksi.*, pelanggan.pelanggan_nama, count(jadwal.jadwal_id) as jumlah');
         $this->orderBy('tanggal_pesan', 'desc');
-        $this->join('pelanggan', 'pelanggan.pelanggan_id = transaksi.pelanggan_id');
-        $this->join('jadwal', 'jadwal.transaksi_id = transaksi.transaksi_id');
+        $this->join('pelanggan', 'pelanggan.pelanggan_id = transaksi.pelanggan_id', 'left');
+        $this->join('jadwal', 'jadwal.transaksi_id = transaksi.transaksi_id', 'left');
         $this->groupBy('transaksi.transaksi_id');
         $this->where('transaksi.status', 'Sudah Bayar');
         if ($dari != null)

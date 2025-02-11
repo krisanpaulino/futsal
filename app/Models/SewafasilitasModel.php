@@ -4,17 +4,20 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class FasilitasModel extends Model
+class SewafasilitasModel extends Model
 {
-    protected $table            = 'fasilitas';
-    protected $primaryKey       = 'fasilitas_id';
+    protected $table            = 'sewafasilitas';
+    protected $primaryKey       = 'sewafasilitas_id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'object';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        'nama_fasilitas',
-        'harga_sewa',
+        'fasilitas_id',
+        'transaksi_id',
+        'jumlah_sewa',
+        'jumlah_jam',
+        'sub_total',
         'status',
     ];
 
@@ -33,8 +36,11 @@ class FasilitasModel extends Model
 
     // Validation
     protected $validationRules      = [
-        'nama_fasilitas' => 'required',
-        'harga_sewa' => 'required',
+        'fasilitas_id' => 'required',
+        'transaksi_id' => 'required',
+        'jumlah_sewa' => 'required',
+        'jumlah_jam' => 'required',
+        'sub_total' => 'required',
         'status' => 'required',
     ];
     protected $validationMessages   = [];
@@ -52,9 +58,12 @@ class FasilitasModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    function getStatus($status)
+    function getDetail($transaksi_id)
     {
-        $this->where('status', $status);
+        $this->join('fasilitas', 'fasilitas.fasilitas_id = sewafasilitas.fasilitas_id');
+        $this->join('transaksi', 'transaksi.transaksi_id = sewafasilitas.transaksi_id');
+        $this->where('sewafasilitas.transaksi_id', $transaksi_id);
+        $this->orderBy('transaksi.tanggal_pesan', 'desc');
         return $this->find();
     }
 }

@@ -13,12 +13,7 @@
     </div>
 </div>
 <!--end breadcrumb-->
-<?php
-
-use Faker\Core\Number;
-use Faker\Provider\Base;
-
-if (session()->has('success')) : ?>
+<?php if (session()->has('success')) : ?>
     <div class="alert alert-success border-0 bg-success alert-dismissible fade show">
         <div class="text-white"><?= session('success') ?></div>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -31,54 +26,42 @@ if (session()->has('success')) : ?>
     </div>
 <?php endif ?>
 <hr />
-<form class="row row-cols-1 g-3 mb-4 row-cols-lg-auto align-items-center">
-    <div class="col">
-        <input type="date" class="form-control" id="input51" name="dari" value="<?= $dari ?>" placeholder="Dari Tanggal">
-    </div>
-    <div class="col">
-        <input type="date" class="form-control" id="input51" name="sampai" value="<?= $sampai ?>" placeholder="Sampai Tanggal">
-    </div>
-    <div class="col">
-        <button type="submit" class="btn btn-primary px-4">Filter</button>
-    </div>
-    <div class="col">
-        <a href="<?= base_url('admin/laporan/cetak?dari' . $dari . '&sampai=' . $sampai) ?>" target="_blank" class="btn btn-warning px-4">Cetak</a>
-    </div>
-</form>
+<a href="<?= base_url('admin/sewa-fasilitas') ?>" class="btn btn-primary mb-4">Transaksi</a>
 <div class="card">
     <div class="card-body">
-        <h6 class="mb-4 text-uppercase">Laporan Keuangan</h6>
+        <h6 class="mb-4 text-uppercase">Data Transaksi</h6>
         <div class="table-responsive">
             <table id="example" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Waktu Transaksi</th>
-                        <th>Waktu Pembayaran</th>
-                        <th>Pelanggan</th>
-                        <th>Jenis Transaksi</th>
+                        <th>Waktu Pesan</th>
+                        <th>Nama Penyewa</th>
+                        <th>Jumlah Fasilitas</th>
                         <th>Total Bayar</th>
+                        <th>Waktu Bayar</th>
+                        <th>Status Pembayaran</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <?php $i = 1;
-                    $total = 0; ?>
+                    <?php $i = 1; ?>
                     <?php foreach ($transaksi as $row) : ?>
                         <tr>
                             <td><?= $i++ ?></td>
                             <td><?= $row->tanggal_pesan ?></td>
-                            <td><?= $row->tanggal_bayar ?></td>
-                            <td><?= $row->pelanggan_nama ?></td>
-                            <td><?= $row->jenis ?></td>
+                            <td><?= $row->nama_penyewa ?></td>
+                            <td><?= $row->jumlah ?></td>
                             <td><?= number_format($row->total_bayar) ?></td>
+                            <td><?= $row->tanggal_bayar ?></td>
+                            <td><?= $row->status ?></td>
+                            <td>
+                                <a href="<?= base_url('admin/transaksi-fasilitas/' . $row->transaksi_id) ?>" class="badge bg-primary">Lihat Detail</a>
+                            </td>
                         </tr>
-                        <?php $total += $row->total_bayar ?>
                     <?php endforeach ?>
                 </tbody>
             </table>
-        </div>
-        <div class="d-flex justify-content-end">
-            <b>Total = Rp<?= number_format($total) ?></b>
         </div>
     </div>
 </div>
@@ -88,4 +71,11 @@ if (session()->has('success')) : ?>
 <?= $this->endSection(); ?>
 <?= $this->section('jsplugins'); ?>
 <script src="<?= base_url() ?>assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+<?= $this->endSection(); ?>
+<?= $this->section('scripts'); ?>
+<script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    });
+</script>
 <?= $this->endSection(); ?>

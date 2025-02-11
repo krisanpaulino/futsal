@@ -157,7 +157,7 @@
                             <td><?= $row->tanggal_pesan ?></td>
                             <td><?= $row->tanggal_bayar ?></td>
                             <td><?= $row->pelanggan_nama ?></td>
-                            <td><?= 'Booking Lapangan' ?></td>
+                            <td><?= $row->jenis ?></td>
                             <td>Rp <?= number_format($row->total_bayar) ?></td>
                         </tr>
                         <?php $total += $row->total_bayar ?>

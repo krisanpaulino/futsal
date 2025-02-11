@@ -77,7 +77,14 @@
                     <a href="<?= base_url('admin/transaksi') ?>">
                         <div class="parent-icon"><i class="fadeIn animated bx bx-money"></i>
                         </div>
-                        <div class="menu-title">Transaksi</div>
+                        <div class="menu-title">Booking Lapangan</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?= base_url('admin/transaksi-fasilitas') ?>">
+                        <div class="parent-icon"><i class="fadeIn animated bx bx-money"></i>
+                        </div>
+                        <div class="menu-title">Sewa Fasilitas</div>
                     </a>
                 </li>
 

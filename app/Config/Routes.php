@@ -51,6 +51,11 @@ $routes->group('admin', ['filter' => 'admin'], static function ($routes) {
     $routes->get('transaksi/(:num)', 'Transaksi::jadwal/$1');
     $routes->get('transaksi-pelanggan/(:num)', 'Transaksi::byPelanggan/$1');
 
+    $routes->get('transaksi-fasilitas', 'Transaksi::fasilitas');
+    $routes->get('transaksi-fasilitas/(:num)', 'Transaksi::detailSewa/$1');
+    $routes->get('sewa-fasilitas', 'Transaksi::sewaFasilitas');
+    $routes->post('sewa', 'Transaksi::prosesSewa');
+
     $routes->get('jadwal', 'Jadwal::index');
     $routes->get('jadwal/hari-ini', 'Jadwal::today');
     $routes->get('jadwal/selesai', 'Jadwal::done');
