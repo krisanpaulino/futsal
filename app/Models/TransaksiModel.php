@@ -66,7 +66,7 @@ class TransaksiModel extends Model
         $this->join('feedback', 'feedback.transaksi_id = transaksi.transaksi_id', 'left');
         $this->where('transaksi.pelanggan_id', $pelanggan_id);
         $this->groupBy('transaksi.transaksi_id');
-        $this->orderBy('transaksi.tanggal', 'desc');
+        $this->orderBy('transaksi.tanggal_pesan', 'desc');
         return $this->find();
     }
     function getSingle($transaksi_id)
@@ -87,6 +87,9 @@ class TransaksiModel extends Model
             $this->join('sewafasilitas', 'sewafasilitas.transaksi_id = transaksi.transaksi_id');
             $this->join('fasilitas', 'fasilitas.fasilitas_id = sewafasilitas.fasilitas_id');
         }
+        $this->select('transaksi.*, pelanggan.pelanggan_nama, count(jadwal.jadwal_id) as jumlah');
+        $this->join('pelanggan', 'pelanggan.pelanggan_id = transaksi.pelanggan_id', 'left');
+        $this->join('jadwal', 'jadwal.transaksi_id = transaksi.transaksi_id', 'left');
         $this->orderBy('tanggal_pesan', 'desc');
         $this->groupBy('transaksi.transaksi_id');
         if ($jenis != null)

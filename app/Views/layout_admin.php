@@ -77,14 +77,7 @@
                     <a href="<?= base_url('admin/transaksi') ?>">
                         <div class="parent-icon"><i class="fadeIn animated bx bx-money"></i>
                         </div>
-                        <div class="menu-title">Booking Lapangan</div>
-                    </a>
-                </li>
-                <li>
-                    <a href="<?= base_url('admin/transaksi-fasilitas') ?>">
-                        <div class="parent-icon"><i class="fadeIn animated bx bx-money"></i>
-                        </div>
-                        <div class="menu-title">Sewa Fasilitas</div>
+                        <div class="menu-title">Booking Lapangan & Fasilitas</div>
                     </a>
                 </li>
 
@@ -101,6 +94,13 @@
                         <li> <a href="<?= base_url('admin/jadwal/selesai') ?>"><i class='bx bx-radio-circle'></i>Selesai</a>
                         </li>
                     </ul>
+                </li>
+                <li>
+                    <a href="<?= base_url('admin/feedback') ?>">
+                        <div class="parent-icon"><i class="fadeIn animated bx bx-star"></i>
+                        </div>
+                        <div class="menu-title">Feedback</div>
+                    </a>
                 </li>
                 <li>
                     <a href="<?= base_url('admin/laporan') ?>">

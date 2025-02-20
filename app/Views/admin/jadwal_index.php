@@ -38,6 +38,7 @@
                         <th>Tanggal Main</th>
                         <th>Mulai</th>
                         <th>Selesai</th>
+                        <th>Fasilitas</th>
                         <th>Status</th>
                         <th></th>
                     </tr>
@@ -51,6 +52,15 @@
                             <td><?= $row->tanggal ?></td>
                             <td><?= $row->waktu_mulai ?></td>
                             <td><?= $row->waktu_selesai ?></td>
+                            <td>
+                                <?php
+                                $fasilitas = getSewaFasilitas($row->jadwal_id);
+                                $hargafasilitas = 0;
+                                ?>
+                                <?php foreach ($fasilitas as $data) : ?>
+                                    <?= $data->nama_fasilitas . ';' ?>
+                                <?php endforeach ?>
+                            </td>
                             <td><?= $row->status ?></td>
                             <td>
                                 <?php if ($row->status == "Pending") : ?>

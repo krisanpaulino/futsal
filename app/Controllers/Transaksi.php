@@ -19,7 +19,7 @@ class Transaksi extends BaseController
         $email = \Config\Services::email();
         // $this->load->library('email');
 
-        $email->setFrom('krisanpaulino@gmail.com', 'KrisanPaulino');
+        $email->setFrom('luciodasilva391@gmail.com', 'Indah Futsal');
         $email->setTo($to);
 
         $email->setSubject($title);
@@ -32,7 +32,7 @@ class Transaksi extends BaseController
         $model = new TransaksiModel();
         $data = [
             'title' => 'Data Transaksi',
-            'transaksi' => $model->getAll('Booking Lapangan')
+            'transaksi' => $model->getAll()
         ];
         return view('admin/transaksi_index', $data);
     }

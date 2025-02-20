@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\FasilitasModel;
 use App\Models\FeedbackModel;
 use App\Models\JadwalModel;
 use App\Models\NotifikasiModel;
@@ -12,13 +13,16 @@ class Ajax extends BaseController
 {
     public function form()
     {
+        $model = new FasilitasModel();
+        $fasilitas = $model->getStatus('Tersedia');
         $jumlah = $this->request->getPost('count');
         if ($jumlah > 0) {
-            $form = view('booking_form', ['jumlah' => $jumlah]);
+            $form = view('booking_form', ['jumlah' => $jumlah, 'fasilitas' => $fasilitas]);
             $summary = view('booking_summary', ['jumlah' => $jumlah]);
             $data = [
                 'form' => $form,
-                'summary' => $summary
+                'summary' => $summary,
+
             ];
             echo json_encode($data);
         }

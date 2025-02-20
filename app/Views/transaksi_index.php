@@ -153,7 +153,8 @@
                     dangerToast('Tidak ada data')
                 }
             },
-            error: function() {
+            error: function(e) {
+                console.log(e);
                 $('#feedback-content').children().remove()
                 dangerToast('gagal mengambil data')
             },
@@ -179,7 +180,8 @@
                     dangerToast('Tidak ada data')
                 }
             },
-            error: function() {
+            error: function(e) {
+                console.log(e);
                 $('#showDetail').children().remove()
                 dangerToast('gagal mengambil data')
             },

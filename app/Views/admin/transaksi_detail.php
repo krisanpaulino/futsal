@@ -35,7 +35,9 @@
                                     <th class="text-left">Jadwal Main</th>
                                     <th class="text-right">Jam Mulai</th>
                                     <th class="text-right">Jam Selesai</th>
-                                    <th class="text-right">Biaya</th>
+                                    <th class="text-right">Harga Booking * Durasi</th>
+                                    <th class="text-right">Fasilitas</th>
+                                    <th class="text-right">Harga Fasilitas * Durasi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -53,6 +55,19 @@
                                         <td class="unit"><?= $row->waktu_mulai ?></td>
                                         <td class="qty"><?= $row->waktu_selesai ?></td>
                                         <td class="total">Rp <?= number_format($row->harga) ?></td>
+                                        <td class="qty">
+                                            <?php
+                                            $fasilitas = getSewaFasilitas($row->jadwal_id);
+                                            $hargafasilitas = 0;
+                                            ?>
+                                            <?php foreach ($fasilitas as $data) : ?>
+                                                <?= $data->nama_fasilitas . ';' ?>
+                                                <?php
+                                                $hargafasilitas += $data->sub_total
+                                                ?>
+                                            <?php endforeach ?>
+                                        </td>
+                                        <td class="total">Rp <?= number_format($hargafasilitas) ?></td>
                                     </tr>
                                 <?php endforeach ?>
                             </tbody>

@@ -123,6 +123,8 @@ class JadwalModel extends Model
 
     function isKosong($tanggal, $waktu_mulai, $waktu_selesai)
     {
+        $this->where('tanggal', $tanggal);
+        $this->groupStart();
         $this->groupStart();
         $this->where('waktu_mulai <=', $waktu_mulai, true)
             ->Where('waktu_selesai >', $waktu_mulai, true)
@@ -130,8 +132,8 @@ class JadwalModel extends Model
         $this->orGroupStart();
         $this->where('waktu_mulai <', $waktu_selesai, true)
             ->where('waktu_selesai >=', $waktu_selesai, true)
+            ->groupEnd()
             ->groupEnd();
-        $this->where('tanggal', $tanggal);
         $result = $this->first();
         // $result = $this->builder()->getCompiledSelect();
         if ($result == null)

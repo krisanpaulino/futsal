@@ -126,6 +126,7 @@
                     count: jumlah
                 },
                 success: function(data) {
+
                     $('#forms').append(data.form);
                     $('#summary').append(data.summary);
                     $("body .time-picker").flatpickr({
@@ -134,6 +135,10 @@
                         dateFormat: "H:i",
                         time_24hr: true,
                     });
+                },
+                error: function(e) {
+                    console.log(e);
+
                 },
                 dataType: "json"
             });
@@ -149,11 +154,23 @@
         }).get();
         var total = 0;
         $.each(dur, function(key, val) {
+            var fas = $('body #fasilitas[data-transaksi="' + key + '"]:checked').map(function() {
+                return $(this);
+            }).get();
+            var totalfasilitas = 0;
             $('body #durasi' + key).text(val);
-            var temp = <?= $lapangan->harga_sewa ?> * val
-            var out = (temp / 1000).toFixed(3)
-            $('body #total' + key).text(out);
-            total += temp
+            var totaldurasi = <?= $lapangan->harga_sewa ?> * val //totaldurasi
+            var out = (totaldurasi / 1000).toFixed(3)
+            $('body #totaldurasi' + key).text(out);
+
+            $.each(fas, function(index, row) {
+                // console.log(val);
+
+                totalfasilitas += val * row.data("harga")
+            })
+            var subtotal = totaldurasi + totalfasilitas
+            total += subtotal
+            $('body #totalfasilitas' + key).text((totalfasilitas / 1000).toFixed(3))
             $('body #error' + key).attr('hidden', true)
         });
         var totalout = (total / 1000).toFixed(3);
@@ -170,6 +187,51 @@
             $('body #error' + key).attr('hidden', true)
         });
     })
+
+    //Fasilitas
+    $('body').on('change', '#fasilitas', function(e) {
+        // var key = $(this).data('transaksi');
+        // var fas = $('body #fasilitas[data-transaksi="' + key + '"]:checked').map(function() {
+        //     return $(this);
+        // }).get();
+        // var durasi = parseInt($('#durasi' + key).text())
+        // var totalfasilitas = 0;
+        // $.each(fas, function(index, row) {
+        //     // console.log(val);
+
+        //     totalfasilitas += durasi * row.data("harga")
+        // })
+        // $('body #totalfasilitas' + key).text((totalfasilitas / 1000).toFixed(3))
+        // var subtotal = totalfasilitas
+        var dur = $('body #durasi').map(function() {
+            return $(this).val();
+        }).get();
+        var total = 0;
+        $.each(dur, function(key, val) {
+            var fas = $('body #fasilitas[data-transaksi="' + key + '"]:checked').map(function() {
+                return $(this);
+            }).get();
+            var totalfasilitas = 0;
+            $('body #durasi' + key).text(val);
+            var totaldurasi = <?= $lapangan->harga_sewa ?> * val //totaldurasi
+            var out = (totaldurasi / 1000).toFixed(3)
+            $('body #totaldurasi' + key).text(out);
+
+            $.each(fas, function(index, row) {
+                // console.log(val);
+
+                totalfasilitas += val * row.data("harga")
+            })
+            var subtotal = totaldurasi + totalfasilitas
+            total += subtotal
+            $('body #totalfasilitas' + key).text((totalfasilitas / 1000).toFixed(3))
+            $('body #error' + key).attr('hidden', true)
+        });
+        var totalout = (total / 1000).toFixed(3);
+        $('body #sumtotal').text(totalout);
+
+    })
+
     $('body').on('click', '#submitBtn', function() {
         if ($('body #form1')[0].reportValidity()) {
             var dur = $('body #durasi').map(function() {
@@ -192,7 +254,7 @@
                         tanggal: tanggal[key]
                     },
                     success: function(res) {
-                        // console.log(res);
+                        console.log(res);
 
                         if (!res)
                             $('body #error' + key).attr('hidden', false)

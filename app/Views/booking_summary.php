@@ -12,8 +12,10 @@
                             <div class="small">Durasi: <span id="durasi<?= $i ?>"></span></div>
                         </div>
                     </div>
-                    <div class="ms-2 d-flex align-items-center">
-                        <p class="price fs-sm"><span class="amount">Rp <span id="total<?= $i ?>">0</span></span></p>
+                    <div class="ms-1 row align-items-center">
+                        <p class="price fs-sm">Booking :<span class="amount">Rp <span id="totaldurasi<?= $i ?>">0</span> <br>
+                                Fasilitas : <span class="amount">Rp <span id="totalfasilitas<?= $i ?>">0</span></p>
+                        <p class="price fs-sm"></p>
                     </div>
                 </div>
             <?php endfor ?>

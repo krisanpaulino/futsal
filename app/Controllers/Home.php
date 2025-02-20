@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Models\BeritaModel;
+use App\Models\FasilitasModel;
 use App\Models\FeedbackModel;
 use App\Models\JadwalModel;
 use App\Models\KepsekModel;
@@ -12,12 +13,27 @@ use App\Models\PelangganModel;
 use App\Models\PendaftaranModel;
 use App\Models\RiwayatModel;
 use App\Models\SekolahModel;
+use App\Models\SewafasilitasModel;
 use App\Models\TaModel;
 use App\Models\TransaksiModel;
 use App\Models\UserModel;
 
 class Home extends BaseController
 {
+    private $email_address = 'luciodasilva391@gmail.com';
+    private function sendEmail($to, $title, $message)
+    {
+        $email = \Config\Services::email();
+        // $this->load->library('email');
+
+        $email->setFrom('luciodasilva391@gmail.com', 'Indah Futsal');
+        $email->setTo($to);
+
+        $email->setSubject($title);
+        $email->setMessage($message);
+
+        return $email->send();
+    }
     public function index(): string
     {
         $mFeedback = new FeedbackModel();
@@ -40,17 +56,40 @@ class Home extends BaseController
     }
     public function booking()
     {
+        $mLapangan = new LapanganModel();
+        $lapangan = $mLapangan->first();
         $post = $this->request->getPost();
         // dd($post);
         $trx = [
-            'pelanggan_id' => 1,
+            'pelanggan_id' => pelanggan()->pelanggan_id,
             'status' => 'Belum Bayar',
-            'total_bayar' => array_sum($post['durasi']) * 30000
+            'total_bayar' => array_sum($post['durasi']) * $lapangan->harga_sewa
         ];
+        //hitung total trx fasilitas
+        $mFasilitas = new FasilitasModel();
+        $totalfasilitas = 0;
+
+        if (isset($post['fasilitas0'])) {
+
+            $trx['jenis'] = 'Booking Lapangan dan Fasilitas';
+        }
+        foreach ($post['durasi'] as $key => $dur) {
+            if (isset($post['fasilitas' . $key])) {
+
+                $fasilitas_ids = $post['fasilitas' . $key];
+                $mFasilitas->selectSum('harga_sewa', 'total');
+                $mFasilitas->whereIn('fasilitas_id', $fasilitas_ids);
+                $total = $mFasilitas->first();
+                $totalfasilitas += $total->total * $dur;
+            }
+        }
+        $trx['total_bayar'] += $totalfasilitas; // LANJUT DI MASUKAN TRANSAKSI FASILITAS KE DB
         $mTransaksi = new TransaksiModel();
         $mJadwal = new JadwalModel();
+        $mSewa = new SewafasilitasModel();
         if ($transaksi_id = $mTransaksi->insert($trx, true)) {
             foreach ($post['durasi'] as $key => $row) {
+                //Jadwal
                 $waktu_mulai = $post['waktu_mulai'][$key];
                 $waktu_selesai = date('H:i', strtotime('+' . $row . ' hour', strtotime($waktu_mulai)));
                 $data = [
@@ -59,11 +98,26 @@ class Home extends BaseController
                     'waktu_mulai' => $waktu_mulai,
                     'waktu_selesai' => $waktu_selesai,
                     'status' => 'Pending',
-                    'harga' => $row * 30000
+                    'harga' => $row * $lapangan->harga_sewa
                 ];
-                $mJadwal->insert($data);
+                $jadwal_id = $mJadwal->insert($data, true);
+
+                //Fasilitas
+                if (isset($post['fasilitas' . $key])) {
+
+                    foreach ($post['fasilitas' . $key] as $i => $fasilitas_id) {
+                        $fasilitas = $mFasilitas->find($fasilitas_id);
+                        $sewafasilitas = [
+                            'fasilitas_id' => $fasilitas_id,
+                            'jadwal_id' => $jadwal_id,
+                            'sub_total' => $row * $fasilitas->harga_sewa
+                        ];
+                        $mSewa->insert($sewafasilitas);
+                    }
+                }
             }
         }
+        $transaksi = $mTransaksi->find($transaksi_id);
         $notifikasi = [
             'transaksi_id' => $transaksi_id,
             'notifikasi_tanggal' => date('Y-m-d H:i:s'),
@@ -72,6 +126,9 @@ class Home extends BaseController
         ];
         $mNotif = new NotifikasiModel();
         $mNotif->insert($notifikasi);
+        $message = "<h1>Booking Lapangan Masuk</h1> Booking lapangan oleh pelanggan : <b>" . pelanggan()->pelanggan_nama . "</b> pada " . $transaksi->tanggal_pesan . "telah masuk. </br> Silahkan login sebagai admin untuk melihat rincian booking.";
+        $error = $this->sendEmail($this->email_address, 'Pesanan Masuk', $message);
+
         return redirect()->to('pesanan-saya');
     }
     function pesananSaya()
@@ -107,6 +164,7 @@ class Home extends BaseController
     function uploadBayar()
     {
         $transaksi_id = $this->request->getPost('transaksi_id');
+
         $file = $this->request->getFile('file');
         $validationRule = [
             'file' => [
@@ -136,6 +194,7 @@ class Home extends BaseController
         }
 
         $model = new TransaksiModel();
+        $transaksi = $model->find($transaksi_id);
         //File Upload 
         $filename = 'bayar' . $transaksi_id . '.' . $file->getClientExtension();
         $file->move('assets/img/bayar/', $filename, true);
@@ -146,6 +205,8 @@ class Home extends BaseController
         $data['tanggal_bayar'] = date('Y-m-d H:i:s');
         $model->update($transaksi_id, $data);
 
+        $message = "<h1>Booking Lapangan dibayar</h1> Booking lapangan oleh pelanggan : <b>" . pelanggan()->pelanggan_nama . "</b> pada " . $transaksi->tanggal_pesan . "telah dibayar. </br> Silahkan login sebagai admin untuk melakukan proses validasi butkti pembayaran.";
+        $error = $this->sendEmail($this->email_address, 'Pesanan Masuk', $message);
         //done
         return redirect()->back()
             ->with('message', "Toastify({'text':'Berhasil diupload!'}).showToast()");

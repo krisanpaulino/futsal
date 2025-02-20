@@ -28,64 +28,31 @@
 <hr />
 <div class="card">
     <div class="card-body">
-        <h6 class="mb-4 text-uppercase">Data Transaksi</h6>
+        <h6 class="mb-4 text-uppercase">Data Feedback</h6>
         <div class="table-responsive">
             <table id="example" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Waktu Pesan</th>
-                        <th>Jenis</th>
                         <th>Nama Pelanggan</th>
-                        <th>Jumlah Booking</th>
-                        <th>Total Bayar</th>
-                        <th>Waktu Bayar</th>
-                        <th>Bukti</th>
-                        <th>Status Pembayaran</th>
-                        <th></th>
+                        <th>Rating</th>
+                        <th>Komentar</th>
+                        <th>Transaksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php $i = 1; ?>
-                    <?php foreach ($transaksi as $row) : ?>
+                    <?php foreach ($feedback as $row) : ?>
                         <tr>
                             <td><?= $i++ ?></td>
-                            <td><?= $row->tanggal_pesan ?></td>
-                            <td><?= $row->jenis ?></td>
                             <td><?= $row->pelanggan_nama ?></td>
-                            <td><?= $row->jumlah ?></td>
-                            <td><?= number_format($row->total_bayar) ?></td>
-                            <td><?= $row->tanggal_bayar ?></td>
-                            <td><a target="_blank" href="<?= base_url('assets/img/bayar/' . $row->bukti_bayar) ?>"><?= ($row->tanggal_bayar != null) ? 'Lihat Bukti' : '' ?></a></td>
-                            <td><?= $row->status ?></td>
-                            <td>
-                                <a href="<?= base_url('admin/transaksi/' . $row->transaksi_id) ?>" class="badge bg-primary">Lihat Detail</a>
-                                <?php if ($row->status == "Butuh Verifikasi") : ?>
-                                    <button class="badge bg-warning border" data-bs-toggle="modal" data-bs-target="#verifikasi" data-id="<?= $row->transaksi_id ?>">Verifikasi</button>
-                                <?php endif ?>
-                            </td>
+                            <td><?= $row->rating ?></td>
+                            <td><?= $row->komentar ?></td>
+                            <td><a target="_blank" href="<?= base_url('admin/transaksi/' . $row->transaksi_id) ?>">Transaksi</a></td>
                         </tr>
                     <?php endforeach ?>
                 </tbody>
             </table>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="verifikasi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <form class="form" action="<?= base_url('admin/verifikasi') ?>" method="post">
-                <?= csrf_field() ?>
-                <input type="hidden" name="transaksi_id" id="kodeitem" value="">
-                <div class="modal-body">
-                    <h5>Yakin ingin verifikasi ?</h5>
-                    Pastikan sudah memeriksa bukti bayar.
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
-                    <button class="btn btn-warning" type="submit">Verifikasi</button>
-                </div>
-            </form>
         </div>
     </div>
 </div>

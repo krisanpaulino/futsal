@@ -33,7 +33,7 @@
                         <div class="row gx-md-5 gy-5">
                             <!--/column -->
                             <div class="col-md-12">
-                                <figure class="rounded"><img src="<?= base_url('assets/front') ?>/images/home2.jpg" srcset="<?= base_url('assets/front') ?>/img/photos/ab2@2x.jpg 2x" alt=""></figure>
+                                <figure class="rounded"><img src="<?= base_url('assets/front') ?>/images/home2.jpg" alt=""></figure>
                             </div>
                             <!--/column -->
                         </div>
@@ -41,7 +41,7 @@
                     </div>
                     <!--/column -->
                     <div class="col-md-6">
-                        <figure class="rounded"><img src="<?= base_url('assets/front') ?>/images/home2.jpg " srcset="<?= base_url('assets/front') ?>/img/photos/ab3@2x.jpg 2x" alt=""></figure>
+                        <figure class="rounded"><img src="<?= base_url('assets/front') ?>/images/home2.jpg " alt=""></figure>
                     </div>
                     <!--/column -->
                 </div>

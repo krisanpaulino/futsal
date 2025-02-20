@@ -14,11 +14,8 @@ class SewafasilitasModel extends Model
     protected $protectFields    = true;
     protected $allowedFields    = [
         'fasilitas_id',
-        'transaksi_id',
-        'jumlah_sewa',
-        'jumlah_jam',
+        'jadwal_id',
         'sub_total',
-        'status',
     ];
 
     protected bool $allowEmptyInserts = false;
@@ -37,11 +34,8 @@ class SewafasilitasModel extends Model
     // Validation
     protected $validationRules      = [
         'fasilitas_id' => 'required',
-        'transaksi_id' => 'required',
-        'jumlah_sewa' => 'required',
-        'jumlah_jam' => 'required',
+        'jadwal_id' => 'required',
         'sub_total' => 'required',
-        'status' => 'required',
     ];
     protected $validationMessages   = [];
     protected $skipValidation       = false;
@@ -58,12 +52,12 @@ class SewafasilitasModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
-    function getDetail($transaksi_id)
-    {
-        $this->join('fasilitas', 'fasilitas.fasilitas_id = sewafasilitas.fasilitas_id');
-        $this->join('transaksi', 'transaksi.transaksi_id = sewafasilitas.transaksi_id');
-        $this->where('sewafasilitas.transaksi_id', $transaksi_id);
-        $this->orderBy('transaksi.tanggal_pesan', 'desc');
-        return $this->find();
-    }
+    // function getDetail($transaksi_id)
+    // {
+    //     $this->join('fasilitas', 'fasilitas.fasilitas_id = sewafasilitas.fasilitas_id');
+    //     $this->join('transaksi', 'transaksi.transaksi_id = sewafasilitas.transaksi_id');
+    //     $this->where('sewafasilitas.transaksi_id', $transaksi_id);
+    //     $this->orderBy('transaksi.tanggal_pesan', 'desc');
+    //     return $this->find();
+    // }
 }

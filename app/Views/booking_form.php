@@ -7,7 +7,7 @@
     </div>
     <div class="col-12">
         <div class="form-floating">
-            <input type="date" class="form-control" id="tanggal" placeholder="Pilih Tanggal" min="<?= date('Y-m-d'); ?>" name="tanggal[]" required>
+            <input type="date" class="form-control" id="jadwal_tanggal" placeholder="Pilih Tanggal" min="<?= date('Y-m-d'); ?>" name="tanggal[]" required>
             <label for="tanggal" class="form-label">Pilih Tanggal</label>
             <div class="invalid-feedback"> </div>
         </div>
@@ -26,5 +26,16 @@
             <div class="invalid-feedback"> </div>
         </div>
     </div>
+    <h4 class="mb-2 mt-4">Sewa Fasilitas</h4>
+    <p class="small text-muted text-primary">Centang fasilitas yang ingin disewa.</p>
 
+    <?php foreach ($fasilitas as $row) : ?>
+        <div class="col-sm-6">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="fasilitas" data-transaksi="<?= $i ?>" name="fasilitas<?= $i ?>[]" value="<?= $row->fasilitas_id ?>" data-harga="<?= $row->harga_sewa ?>">
+                <label class="form-check-label" for="inlineCheckbox1"><?= $row->nama_fasilitas ?></label>
+            </div>
+        </div>
+    <?php endforeach ?>
+    <hr class="mt-7 mb-6">
 <?php endfor; ?>
