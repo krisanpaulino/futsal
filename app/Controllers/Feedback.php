@@ -13,7 +13,7 @@ class Feedback extends BaseController
         $model = new FeedbackModel();
         $data = [
             'title' => 'Data Feedback',
-            'feedback' => $model->findAll()
+            'feedback' => $model->getFeedback()
         ];
         return view('admin/feedback_index', $data);
     }
