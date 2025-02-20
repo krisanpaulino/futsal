@@ -45,7 +45,7 @@ class Lapangan extends BaseController
             $log = [
                 'user_id' => user()->user_id,
                 'operation' => 'insert',
-                'log_tablename' => 'fasilitas',
+                'log_tablename' => 'lapangan',
                 'changed_at' => date('Y-m-d H:i:s'),
                 'changed_data' => '-'
             ];
@@ -54,7 +54,7 @@ class Lapangan extends BaseController
             $log = [
                 'user_id' => user()->user_id,
                 'operation' => 'update',
-                'log_tablename' => 'fasilitas',
+                'log_tablename' => 'lapangan',
                 'changed_at' => date('Y-m-d H:i:s'),
                 'changed_data' => $old_data
             ];
