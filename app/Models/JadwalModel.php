@@ -99,7 +99,7 @@ class JadwalModel extends Model
         $this->orderBy('jadwal.tanggal', 'desc');
         return $this->find();
     }
-    function getToday()
+    function getToday($count = false)
     {
         $this->select('jadwal.*, pelanggan.*');
         $this->join('transaksi', 'jadwal.transaksi_id = transaksi.transaksi_id');
@@ -108,6 +108,8 @@ class JadwalModel extends Model
         $this->where('jadwal.status !=', 'Selesai', true);
         $this->where('jadwal.tanggal', date('Y-m-d'), true);
         $this->orderBy('jadwal.waktu_mulai', 'asc');
+        if ($count == true)
+            return $this->countAllResults();
         return $this->find();
     }
     function getSelesai()

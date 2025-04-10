@@ -4,8 +4,10 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\FeedbackModel;
+use App\Models\JadwalModel;
 use App\Models\LogdataModel;
 use App\Models\PelangganModel;
+use App\Models\TransaksiModel;
 use App\Models\UserModel;
 
 class Admin extends BaseController
@@ -13,7 +15,15 @@ class Admin extends BaseController
     public function index()
     {
 
-        return view('layout_admin', ['title' => 's']);
+        $mTransaksi = new TransaksiModel();
+        $mJadwal = new JadwalModel();
+        $data = [
+            'title' => 'Dashboard',
+            'total_booking' => $mTransaksi->countAllResults(),
+            'jadwal_hariini' => $mJadwal->getToday(true)
+        ];
+
+        return view('admin/dashboard', $data);
     }
 
     public function user()
