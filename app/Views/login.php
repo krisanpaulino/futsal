@@ -43,6 +43,18 @@
                                     </div>
                                     <div class="form-body">
                                         <form class="row g-3" action="<?= base_url('login') ?>" method="post">
+                                            <?php if (session()->has('success')) : ?>
+                                                <div class="alert alert-success border-0 bg-success alert-dismissible fade show">
+                                                    <div class="text-white"><?= session('success') ?></div>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+                                            <?php endif ?>
+                                            <?php if (session()->has('danger')) : ?>
+                                                <div class="alert alert-danger border-0 bg-danger alert-dismissible fade show">
+                                                    <div class="text-white"><?= session('danger') ?></div>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+                                            <?php endif ?>
                                             <div class="col-12">
                                                 <label for="inputEmailAddress" class="form-label">Username</label>
                                                 <input type="text" class="form-control" id="inputEmailAddress" name="username" placeholder="jhon@example.com">
