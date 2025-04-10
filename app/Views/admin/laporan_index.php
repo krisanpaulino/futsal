@@ -15,9 +15,6 @@
 <!--end breadcrumb-->
 <?php
 
-use Faker\Core\Number;
-use Faker\Provider\Base;
-
 if (session()->has('success')) : ?>
     <div class="alert alert-success border-0 bg-success alert-dismissible fade show">
         <div class="text-white"><?= session('success') ?></div>

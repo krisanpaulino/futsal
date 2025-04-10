@@ -105,9 +105,9 @@ class TransaksiModel extends Model
         $this->groupBy('transaksi.transaksi_id');
         $this->where('transaksi.status', 'Sudah Bayar');
         if ($dari != null)
-            $this->where('tanggal_pesan >=', $dari, true);
+            $this->where('CAST(tanggal_pesan AS DATE) >=', $dari, true);
         if ($sampai != null)
-            $this->where('tanggal_pesan <=', $sampai, true);
+            $this->where('CAST(tanggal_pesan AS DATE) <=', $sampai, true);
         return $this->find();
     }
 }
