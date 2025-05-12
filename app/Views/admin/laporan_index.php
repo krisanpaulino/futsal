@@ -39,7 +39,7 @@ if (session()->has('success')) : ?>
         <button type="submit" class="btn btn-primary px-4">Filter</button>
     </div>
     <div class="col">
-        <a href="<?= base_url('admin/laporan/cetak?dari' . $dari . '&sampai=' . $sampai) ?>" target="_blank" class="btn btn-warning px-4">Cetak</a>
+        <a href="<?= base_url('admin/laporan/cetak?dari=' . $dari . '&sampai=' . $sampai) ?>" target="_blank" class="btn btn-warning px-4">Cetak</a>
     </div>
 </form>
 <div class="card">
