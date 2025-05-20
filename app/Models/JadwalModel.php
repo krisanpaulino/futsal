@@ -60,7 +60,9 @@ class JadwalModel extends Model
 
     function byTransaksi($id)
     {
-        $this->where('transaksi_id', $id);
+        $this->select('jadwal.*, transaksi.status as status_transaksi');
+        $this->join('transaksi', 'transaksi.transaksi_id = jadwal.transaksi_id');
+        $this->where('jadwal.transaksi_id', $id);
         return $this->find();
     }
     function tampilDepan($pelanggan_id = null)

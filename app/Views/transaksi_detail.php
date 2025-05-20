@@ -35,9 +35,29 @@
                                             </td>
                                         </tr>
                                     <?php endif ?>
+                                    <?php if ($fasilitas == null && $row->status_transaksi == 'Belum Bayar') : ?>
+                                        <tr>
+                                            <td colspan="2">
+                                                <form action="<?= base_url('tambah-fasilitas') ?>" method="post">
+                                                    <input type="hidden" name="jadwal_id" value="<?= $row->jadwal_id ?>">
+                                                    <?= csrf_field() ?>
+                                                    <?php foreach (getFasilitasNotInJadwal($row->jadwal_id) as $r) : ?>
+                                                        <div class="col-sm-6">
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox" id="fasilitas" name="fasilitas[]" value="<?= $r->fasilitas_id ?>" data-harga="<?= $r->harga_sewa ?>">
+                                                                <label class="form-check-label" for="inlineCheckbox1"><?= $r->nama_fasilitas ?> (Rp <?= number_format($r->harga_sewa) ?>)</label>
+                                                            </div>
+                                                        </div>
+                                                    <?php endforeach ?>
+                                                    <button type="submit" class="badge bg-primary">Tambah Fasilitas</button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                    <?php endif ?>
                                 <?php endforeach ?>
 
                             </tbody>
+
                         </table>
                     <?php else : ?>
                         <p class="price text-danger">Tidak ada data.</p>

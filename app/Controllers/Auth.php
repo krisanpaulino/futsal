@@ -72,9 +72,9 @@ class Auth extends BaseController
                 'user_id' => $user_id,
             ];
             if ($mPelanggan->insert($pelanggan))
-                return redirect()->to('auth')->with('message', "successToast('Gagal')");
+                return redirect()->to('auth')->with('message', "successToast('Berhasil')");
             else
-                dd($mPelanggan->errors());
+                return redirect()->back()->with('message', "dangerToast('Gagal')")->withInput()->with('errors', $mPelanggan->errors());
         }
         // dd($model->errors());
         return redirect()->back()->with('message', "dangerToast('Gagal')")->withInput()->with('errors', $model->errors());

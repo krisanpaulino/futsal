@@ -57,4 +57,14 @@ class FasilitasModel extends Model
         $this->where('status', $status);
         return $this->find();
     }
+
+    function notInJadwal($jadwal)
+    {
+        $this->select('fasilitas.*');
+        $this->join('sewafasilitas', 'sewafasilitas.fasilitas_id = fasilitas.fasilitas_id AND sewafasilitas.jadwal_id = ' . $jadwal, 'left');
+        $this->where('sewafasilitas_id is null', null, false);
+        $this->groupBy('fasilitas.fasilitas_id');
+        // return $this->builder->getCompiledSelect();
+        return $this->find();
+    }
 }

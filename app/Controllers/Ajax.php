@@ -30,7 +30,6 @@ class Ajax extends BaseController
     public function detailTransaksi()
     {
         $id = $this->request->getPost('id');
-
         $model = new JadwalModel();
         $data['show'] = $model->byTransaksi($id);
         $show = view('transaksi_detail', $data);

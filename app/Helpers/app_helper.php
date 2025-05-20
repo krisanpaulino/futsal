@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\FasilitasModel;
 use App\Models\PelangganModel;
 use App\Models\SewafasilitasModel;
 use App\Models\UserModel;
@@ -21,5 +22,12 @@ function getSewaFasilitas($jadwal_id)
     $model = new SewafasilitasModel();
     $model->join('fasilitas', 'fasilitas.fasilitas_id = sewafasilitas.fasilitas_id');
     $res = $model->where('jadwal_id', $jadwal_id)->find();
+    return $res;
+}
+
+function getFasilitasNotInJadwal($jadwal_id)
+{
+    $model = new FasilitasModel();
+    $res = $model->notInJadwal($jadwal_id);
     return $res;
 }

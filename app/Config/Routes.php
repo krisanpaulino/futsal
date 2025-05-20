@@ -20,6 +20,7 @@ $routes->get('profil', 'Home::profil', ['filter' => 'pelanggan']);
 $routes->post('profil/update', 'Home::updateProfil', ['filter' => 'pelanggan']);
 $routes->post('profil/ganti-password', 'Home::updatePassword', ['filter' => 'pelanggan']);
 $routes->post('booking', 'Home::booking', ['filter' => 'pelanggan']);
+$routes->post('tambah-fasilitas', 'Home::tambahFasilitas', ['filter' => 'pelanggan']);
 $routes->post('ajax/booking-form', 'Ajax::form', ['filter' => 'pelanggan']);
 $routes->post('ajax/cek-jadwal', 'Ajax::cekJadwal', ['filter' => 'pelanggan']);
 $routes->post('ajax/detail-transaksi', 'Ajax::detailTransaksi', ['filter' => 'pelanggan']);

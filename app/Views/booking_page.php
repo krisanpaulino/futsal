@@ -79,7 +79,7 @@
                                     <div class="col-sm-9 form-inline" id="choose">
                                         <div class="form-floating form-group">
                                             <input type="number" class="form-control" id="sesi" placeholder="First name" value="" required>
-                                            <label for="sesi" class="form-label">Jumlah Sesi</label>
+                                            <label for="sesi" class="form-label">Jumlah Pesanan</label>
                                             <div class="invalid-feedback"> </div>
                                         </div>
                                         <div class="form-group">

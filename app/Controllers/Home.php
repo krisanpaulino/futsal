@@ -172,7 +172,7 @@ class Home extends BaseController
                 'rules' => [
                     'uploaded[file]',
                     'is_image[file]',
-                    'mime_in[file,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
+                    'mime_in[file,image/jpg,image/jpeg,image/gif,image/png,image/webp,application/pdf]',
                     // 'max_size[file,2048]',
                     // 'max_dims[file,1920,1080]',
                 ],
@@ -281,5 +281,46 @@ class Home extends BaseController
         return redirect()->back()
             ->with('message', "Toastify({'text':'Password berhasil diubah!'}).showToast()")
             ->with('errors', $model->errors());
+    }
+
+    function tambahFasilitas()
+    {
+        $jadwal_id = $this->request->getPost('jadwal_id');
+        $mJadwal = new JadwalModel();
+        $jadwal = $mJadwal->find($jadwal_id);
+
+        $model = new TransaksiModel();
+        $transaksi = $model->find($jadwal->transaksi_id);
+
+        $mFasilitas = new FasilitasModel();
+        $fasilitas = $this->request->getPost('fasilitas');
+        $mSewaF = new SewafasilitasModel();
+        $total = 0; //total tambah fasilitas
+        // dd($fasilitas);
+        foreach ($fasilitas as $fasilitas_id) {
+            $fas = $mFasilitas->find($fasilitas_id);
+            $total += $fas->harga_sewa;
+
+            $starttimestamp = strtotime($jadwal->waktu_mulai);
+            $endtimestamp = strtotime($jadwal->waktu_selesai);
+            $difference = abs($endtimestamp - $starttimestamp) / 3600;
+
+            $sewa = [
+                'fasilitas_id' => $fasilitas,
+                'sub_total' => $fas->harga_sewa * $difference,
+                'jadwal_id' => $jadwal_id
+            ];
+            $mSewaF->insert($sewa);
+        }
+
+        $datatrx = [
+            'total_bayar' => $transaksi->total_bayar + $total
+        ];
+
+        $model->where('transaksi_id', $jadwal->transaksi_id);
+        $model->set($datatrx);
+        $model->update();
+
+        return redirect()->back()->with('message', "Toastify({'text':'Pesanan berhasil diupdate!'}).showToast()");
     }
 }

@@ -77,45 +77,74 @@
                                                 <input type="email" class="form-control" placeholder="Email" name="username" id="loginEmail">
                                                 <label for="loginEmail">Email</label>
                                             </div>
+                                            <div class="invalid-feedback">
+                                                <?php if (isset(session('errors')['username'])) : ?>
+                                                    <?= session('errors')['username'] ?>
+                                                <?php endif; ?>
+                                            </div>
                                             <div class="form-floating mb-4">
                                                 <input type="text" class="form-control" name="pelanggan_nama">
                                                 <label for="loginEmail">Nama Lengkap</label>
                                             </div>
-                                            <div class="form-floating mb-4">
-                                                <input type="text" class="form-control" name="pelanggan_telepon">
-                                                <label for="loginEmail">Nomor HP (WA)</label>
-                                            </div>
-                                            <div class="form-floating password-field mb-4">
-                                                <input type="password" name="user_password" class="form-control" placeholder="Password" id="loginPassword">
-                                                <span class="password-toggle"><i class="uil uil-eye"></i></span>
-                                                <label for="loginPassword">Password</label>
-                                            </div>
-                                            <div class="form-floating password-field mb-4">
-                                                <input type="password" name="password_confirmation" class="form-control" placeholder="Password" id="loginPassword">
-                                                <span class="password-toggle"><i class="uil uil-eye"></i></span>
-                                                <label for="loginPassword">Konfirmasi Password</label>
-                                            </div>
-                                            <button class="btn btn-primary rounded-pill btn-login w-100 mb-2" type="submit">Sign Up</button>
-                                        </form>
-                                        <!-- /form -->
-                                        <p class="mb-0">Sudah punya akun? <a href="<?= base_url('auth') ?>" class="hover">Log in</a></p>
-                                        <!--/.social -->
                                     </div>
-                                    <!--/div -->
+                                    <div class="invalid-feedback">
+                                        <?php if (isset(session('errors')['pelanggan_nama'])) : ?>
+                                            <?= session('errors')['pelanggan_nama'] ?>
+                                        <?php endif; ?>
+                                    </div>
+                                    <div class="form-floating mb-4">
+                                        <input type="text" class="form-control" name="pelanggan_telepon">
+                                        <label for="loginEmail">Nomor HP (WA)</label>
+                                    </div>
                                 </div>
-                                <!--/column -->
+                                <div class="invalid-feedback">
+                                    <?php if (isset(session('errors')['pelanggan_telepon'])) : ?>
+                                        <?= session('errors')['pelanggan_telepon'] ?>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="form-floating password-field mb-4">
+                                    <input type="password" name="user_password" class="form-control" placeholder="Password" id="loginPassword">
+                                    <span class="password-toggle"><i class="uil uil-eye"></i></span>
+                                    <label for="loginPassword">Password</label>
+                                </div>
                             </div>
-                            <!--/.row -->
+                            <div class="invalid-feedback">
+                                <?php if (isset(session('errors')['user_password'])) : ?>
+                                    <?= session('errors')['user_password'] ?>
+                                <?php endif; ?>
+                            </div>
+                            <div class="form-floating password-field mb-4">
+                                <input type="password" name="password_confirmation" class="form-control" placeholder="Password" id="loginPassword">
+                                <span class="password-toggle"><i class="uil uil-eye"></i></span>
+                                <label for="loginPassword">Konfirmasi Password</label>
+                            </div>
                         </div>
-                        <!-- /.card -->
+                        <div class="invalid-feedback">
+                            <?php if (isset(session('errors')['password_confirmation'])) : ?>
+                                <?= session('errors')['password_confirmation'] ?>
+                            <?php endif; ?>
+                        </div>
+                        <button class="btn btn-primary rounded-pill btn-login w-100 mb-2" type="submit">Sign Up</button>
+                        </form>
+                        <!-- /form -->
+                        <p class="mb-0">Sudah punya akun? <a href="<?= base_url('auth') ?>" class="hover">Log in</a></p>
+                        <!--/.social -->
                     </div>
-                    <!-- /column -->
+                    <!--/div -->
                 </div>
-                <!-- /.row -->
+                <!--/column -->
             </div>
-            <!-- /.container -->
-        </section>
-        <!-- /section -->
+            <!--/.row -->
+    </div>
+    <!-- /.card -->
+    </div>
+    <!-- /column -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    </section>
+    <!-- /section -->
     </div>
     <!-- /.content-wrapper -->
     <footer class="bg-dark text-inverse">
