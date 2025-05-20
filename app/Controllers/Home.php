@@ -171,8 +171,8 @@ class Home extends BaseController
                 'label' => 'Image File',
                 'rules' => [
                     'uploaded[file]',
-                    'is_image[file]',
-                    'mime_in[file,image/jpg,image/jpeg,image/gif,image/png,image/webp,application/pdf]',
+                    // 'is_image[file]',
+                    'mime_in[file,application/pdf,image/jpg,image/jpeg,image/gif,image/png,image/webp]',
                     // 'max_size[file,2048]',
                     // 'max_dims[file,1920,1080]',
                 ],
@@ -180,7 +180,7 @@ class Home extends BaseController
         ];
         if (!$this->validateData([], $validationRule)) {
             $errors = ['errors' => $this->validator->getErrors()];
-            // dd($file);
+            dd($errors);
             return redirect()->back()->with('errors', $errors)
                 ->with('message', "Toastify({'text':'File tidak valid.', style: {
             background: '#fd2e64',
