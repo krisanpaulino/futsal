@@ -12,7 +12,7 @@ class Lapangan extends BaseController
     public function index() //langsung detail lapangan
     {
         $model = new LapanganModel();
-        $lapangan = $model->first();
+        $lapangan = $model->findAll();
 
         $data = [
             'title' => 'Data Lapangan',
@@ -20,19 +20,22 @@ class Lapangan extends BaseController
         ];
         return view('admin/lapangan_detail', $data);
     }
-    public function form() //langsung detail lapangan
+    public function form($id = null) //langsung detail lapangan
     {
-        $model = new LapanganModel();
-        $lapangan = $model->first();
-        if (empty($lapangan))
-            $lapangan = new LapanganModel();
 
+        if ($id == null)
+            $lapangan = new LapanganModel();
+        else {
+            $model = new LapanganModel();
+            $lapangan = $model->find($id);
+        }
         $data = [
             'title' => 'Data Lapangan',
             'lapangan' => $lapangan
         ];
         return view('admin/lapangan_form', $data);
     }
+
 
     function save()
     {

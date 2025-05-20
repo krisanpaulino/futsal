@@ -40,7 +40,8 @@ $routes->group('admin', ['filter' => 'admin'], static function ($routes) {
 
     $routes->get('pelanggan', 'Admin::pelanggan');
     $routes->get('lapangan', 'Lapangan::index');
-    $routes->get('lapangan/form', 'Lapangan::form');
+    $routes->get('lapangan/tambah', 'Lapangan::form');
+    $routes->get('lapangan/edit/(:num)', 'Lapangan::form/$1');
     $routes->post('lapangan', 'Lapangan::save');
 
     $routes->get('fasilitas', 'Fasilitas::index');
